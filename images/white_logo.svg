@@ -1,0 +1,20 @@
+<svg width="286" height="60" xmlns="http://www.w3.org/2000/svg" fill="none">
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_26">
+   <text fill="#ffffff" x="21.16691" y="24.57153" id="svg_6" stroke-width="0" font-size="30" font-family="'Alegreya'" text-anchor="start" xml:space="preserve" font-weight="normal" stroke="null" transform="matrix(2.04885 0 0 2.04885 -29.3679 -1.29667)">U</text>
+   <text fill="#ffffff" x="57" y="26.5" id="svg_7" stroke-width="0" font-size="30" font-family="'Alegreya'" text-anchor="start" xml:space="preserve">sts</text>
+  </g>
+  <g id="svg_27">
+   <text fill="#ffffff" stroke-width="0" x="113.89198" y="26.31339" id="svg_8" font-size="30" font-family="'Alegreya'" text-anchor="start" xml:space="preserve" stroke="null" transform="matrix(2.1455 0 0 2.1455 -145.585 -6.58055)">S</text>
+   <text fill="#ffffff" stroke-width="0" x="133.46535" y="29.77921" id="svg_9" font-size="30" font-family="'Alegreya'" text-anchor="start" xml:space="preserve" stroke="null" transform="matrix(0.914855 0 0 0.914855 10.8986 -0.381296)">hop</text>
+  </g>
+  <g id="svg_1">
+   <path fill="#4C261D" stroke="null" stroke-width="0" opacity="NaN" d="m212,25.5c0,0 -14,19 -25,7c-11,-12 7,37 41,3" id="svg_22"/>
+   <ellipse fill="#4C261D" stroke="#ffffff" cx="234.5" cy="29.5" id="svg_14" rx="10.5" ry="8"/>
+   <ellipse fill="#4C261D" stroke="null" cx="220.5" cy="29.5" id="svg_16" rx="10.5" ry="8"/>
+   <path fill="#4C261D" stroke-width="0" opacity="NaN" d="m243.70017,26.5c0,0 13.54149,19 24.18124,7c10.63975,-12 -6.77075,37 -39.65723,3" id="svg_25" stroke="#ffffff"/>
+  </g>
+ </g>
+
+</svg>

@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 250px;
+    height: 250px;
+}
+.admin__login{
+    width: 100%;
+    height: fit-content;
+    border: 2px solid grey;
+    padding: 25 15px;
+}
+table {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+input {
+    display: block;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 15px;
+    color: grey;
+    border: none;
+    border-bottom: 1px solid grey;
+    transition: 0.5s;
+
+    /* border: 1 px grey; */
+}
+input:last-of-type{
+    color: black;
+    border: none;
+    background-color: #E1E1e1;
+}
+input:last-of-type:hover{
+    color: black;
+    background-color: #E1f1f1;
+}
+input:focus{
+    outline: none;
+    color: dimgray;
+}
+input:hover, :focus{
+    border-bottom:1px solid limegreen;
+}
