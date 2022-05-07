@@ -19,7 +19,6 @@ include 'includes/db.php';
 </head>
 
 <body>
-  barev
   <header class="header">
 
     <?php include 'includes/header.php'; ?>
