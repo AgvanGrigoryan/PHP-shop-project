@@ -61,7 +61,7 @@ include 'includes/db.php';
             Мы следим за качеством в Ереване и знаем, где покупать лучшее. Обзоры, каталоги вещей с ценами и
             скидками, адреса и телефоны</p>
           <div class="header__arrow">
-            <a class="header__arrow-link" href="#">
+            <a class="header__arrow-link" href="#popular-product">
               <img class="header_arrow-img" src="images/arrow.svg" alt="">
             </a>
           </div>
@@ -70,55 +70,31 @@ include 'includes/db.php';
     </div>
   </header>
 
-  <div class="popular-product product__box">
+  <?php
+    $popular = mysqli_query($connection,'SELECT * FROM `product` ORDER BY `bought` DESC LIMIT 4;');
+  ?>
+  <div class="popular-product product__box" id="popular-product">
     <div class="container">
       <div class="popular-product__inner product__box__inner">
         <h2 class="popular-product__title title">Popular Products</h2>
         <div class="popular-product__items product__items">
-          <div class="product__item">
-            <a href="" class="product__img-box">
-              <img src="images/products/vanish_oxi_action_30g_200x200.jpg" alt="" class="product__img">
-            </a>
-            <a href="#" class="product__name">Prod Name</a>
-            <span class="product__price-weight">100g</span>
-            <div class="product__bottom-box">
-              <p class="product__price">499Dram</p>
-              <button class="product__buy-btn">Buy</button>
+          <?php
+            while($pop_prod = mysqli_fetch_assoc($popular)){
+              ?>
+            <div class="product__item">
+              <a href="" class="product__img-box">
+                <img src="images/products/<?php echo $pop_prod['image'] ?>.jpg" alt="" class="product__img">
+              </a>
+              <a href="#" class="product__name"><?php echo $pop_prod['title'] ?></a>
+              <span class="product__price-weight"><?php echo $pop_prod['weight'] ?>g</span>
+              <div class="product__bottom-box">
+                <p class="product__price"><?php echo $pop_prod['price'] ?>&#x58f</p>
+                <button class="product__buy-btn">Buy</button>
+              </div>
             </div>
-          </div>
-          <div class="product__item">
-            <a href="" class="product__img-box">
-              <img src="images/products/papyrus_kitchen_towel_200x200.jpg" alt="" class="product__img">
-            </a>
-            <a href="#" class="product__name">Prod Name</a>
-            <span class="product__price-weight">100g</span>
-            <div class="product__bottom-box">
-              <p class="product__price">499Dram</p>
-              <button class="product__buy-btn">Buy</button>
-            </div>
-          </div>
-          <div class="product__item">
-            <a href="" class="product__img-box">
-              <img src="images/products/chopping_board_200x200.jpg" alt="" class="product__img">
-            </a>
-            <a href="#" class="product__name">Prod Name</a>
-            <span class="product__price-weight">100g</span>
-            <div class="product__bottom-box">
-              <p class="product__price">499Dram</p>
-              <button class="product__buy-btn">Buy</button>
-            </div>
-          </div>
-          <div class="product__item">
-            <a href="" class="product__img-box">
-              <img src="images/products/toy_rabbit_200x200.jpg" alt="" class="product__img">
-            </a>
-            <a href="#" class="product__name">Prod Name</a>
-            <span class="product__price-weight">100g</span>
-            <div class="product__bottom-box">
-              <p class="product__price">499Dram</p>
-              <button type="button" class="product__buy-btn">Buy</button>
-            </div>
-          </div>
+              <?php
+            }
+          ?>
           <!-- <div class="product__item"></div>
           <div class="product__item"></div>
           <div class="product__item"></div>
@@ -135,11 +111,9 @@ include 'includes/db.php';
   <div class="category">
     <div class="container">
       <div class="category__inner">
-        <div class="category__top">
           <h2 class="category__title title">
             Categories
           </h2>
-        </div>
         <div class="category__items">
           <?php
           while ($cat = mysqli_fetch_assoc($categories)) {
@@ -159,7 +133,7 @@ include 'includes/db.php';
   </div>
 
   <?php
-    $new_prod = mysqli_query($connection,'SELECT * FROM `product` ORDER BY id DESC LIMIT 10;');
+    $new_prod = mysqli_query($connection,'SELECT * FROM `product` ORDER BY id DESC LIMIT 4;');
   ?>
 
   <div class="new-product product__box">

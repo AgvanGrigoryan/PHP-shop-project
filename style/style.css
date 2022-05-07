@@ -284,9 +284,9 @@ nav.black>ul>li>a {
 .product__items {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
     width: 100%;
-    height: 100%;
+    height: 450px;
+    padding: 10px 32px; 
 }
 
 .product__item {
@@ -294,12 +294,12 @@ nav.black>ul>li>a {
     flex-direction: column;
     justify-content: space-evenly;
     background-color: #fff;
-    margin-left: 10px;
+    margin-left: 15px;
     border-radius: 10px;
     box-shadow: 0 0 25px rgb(83 90 88 / 15%);
-    padding: 0px 20px 20px;
-    width: auto;
-    height: 100%;
+    padding: 0px 20px 10px;
+    width: 255px;
+    max-height: 430px;
     transition: 0.5s;
 }
 
@@ -328,6 +328,7 @@ nav.black>ul>li>a {
 }
 
 .product__price-weight {
+    display:block;
     color: #717978;
     margin-bottom: 20px;
     font-family: roboto-regular, helvetica, arial, 'sans-serif';
