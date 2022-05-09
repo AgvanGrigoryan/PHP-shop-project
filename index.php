@@ -55,7 +55,6 @@ include 'includes/db.php';
 
         <h1 class="header__title">Welcome to <br> USTs Shop</h1>
 
-
         <div class="header__content">
           <p class="header__descr">
             Мы следим за качеством в Ереване и знаем, где покупать лучшее. Обзоры, каталоги вещей с ценами и
@@ -105,9 +104,7 @@ include 'includes/db.php';
   </div>
 
 
-  <?php
-  $categories = mysqli_query($connection, 'SELECT `image`,`title` FROM `product_categories` GROUP BY `title`');
-  ?>
+
   <div class="category">
     <div class="container">
       <div class="category__inner">
@@ -118,7 +115,7 @@ include 'includes/db.php';
           <?php
           while ($cat = mysqli_fetch_assoc($categories)) {
           ?>
-            <a href="" class="category__link">
+            <a href="category.php?id=<?php echo $cat['id']; ?>" class="category__link">
               <div class="category__box">
                 <img src="images/category/<?php echo $cat['image']; ?>.png" alt="" class="category__img">
                 <p class="category__text"><?php echo $cat['title']; ?></p>                

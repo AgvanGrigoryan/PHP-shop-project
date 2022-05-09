@@ -1,4 +1,9 @@
+
+
+sdelat effect obratnogo focusa dlya pole poiska
+
+product page
+category page
+
+footer
 dobavit iconku korzini i user-a
-
-sdelate pole dlya poiska v header-e
-

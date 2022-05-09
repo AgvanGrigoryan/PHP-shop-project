@@ -1,5 +1,4 @@
 <?php
-
 include 'includes/db.php';
 ?>
 <?php
@@ -32,15 +31,28 @@ include 'includes/db.php';
                         echo '<p>Results for your request: ' . mysqli_num_rows($res) . '</p><br>';
                         while($search_res = mysqli_fetch_assoc($res)){
                             ?>
+
                             <div class="prod">
-                                <div class="prod__img-box">
-                                    <img class="prod__img" src="images/products/<?php echo $search_res['image']; ?>_200x200.jpg" alt="">
-                                </div>
-                                <div class="prod__info">
-                                    <h2 class="prod__title"><?php echo $search_res['title']; ?></h2>
-                                    <a href="#" class="prod__category"></a>
-                                    <p class="prod__price"><?php echo $search_res['price'];?> &#x58f</p>
-                                </div>
+                                <a href="product.php?id=<?php echo $search_res['id']; ?>" >
+                                    <div class="prod__img-box">
+                                        <img class="prod__img" src="images/products/<?php echo $search_res['image']; ?>_200x200.jpg" alt="">
+                                    </div>
+                                    <div class="prod__info">
+                                        <h2 class="prod__title"><?php echo $search_res['title']; ?></h2>
+                                        <?php
+                                        $prod_cat = false; 
+                                        foreach($categories as $cat){
+                                            if( $cat['id']== $search_res['categorie_id']){
+                                                $prod_cat = $cat;
+                                                break;
+                                            }
+                                        }
+                                    
+                                        ?>
+                                        <a href="category.php?id=<?php echo $prod_cat['id']; ?>" class="prod__category"><?php echo $prod_cat['title'];?></a>
+                                        <p class="prod__price"><?php echo $search_res['price'];?> &#x58f</p>
+                                    </div>
+                                </a>
                             </div>
                         <?php
                         };
