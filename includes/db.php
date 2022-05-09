@@ -14,4 +14,5 @@ require 'config.php';
    echo mysqli_connect_error();
    exit();
  }
+ $categories = mysqli_query($connection,"SELECT * FROM `product_categories`")
 ?>

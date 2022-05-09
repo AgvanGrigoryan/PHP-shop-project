@@ -8,4 +8,5 @@
       'name' => 'ustsdatabase'
     )
   );
+  // require 'db.php';
 ?>

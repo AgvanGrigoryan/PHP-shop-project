@@ -25,7 +25,7 @@ include 'includes/db.php';
     <div class="container">
       <div class="header__inner">
 
-        <div class="header__top">
+        <!-- <div class="header__top">
           <a class="logo" href="#">
             <svg id="header__logo" width="286" height="60" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g>
@@ -51,7 +51,7 @@ include 'includes/db.php';
             <a class="header__phone-number" href="tel:+37491455690">тел. +374-91-45-56-90</a>
           </div>
 
-        </div>
+        </div> -->
 
         <h1 class="header__title">Welcome to <br> USTs Shop</h1>
 
@@ -71,7 +71,7 @@ include 'includes/db.php';
   </header>
 
   <?php
-    $popular = mysqli_query($connection,'SELECT * FROM `product` ORDER BY `bought` DESC LIMIT 4;');
+    $popular = mysqli_query($connection,'SELECT * FROM `product` ORDER BY `sales` DESC LIMIT 4;');
   ?>
   <div class="popular-product product__box" id="popular-product">
     <div class="container">
@@ -82,13 +82,13 @@ include 'includes/db.php';
             while($pop_prod = mysqli_fetch_assoc($popular)){
               ?>
             <div class="product__item">
-              <a href="" class="product__img-box">
-                <img src="images/products/<?php echo $pop_prod['image'] ?>.jpg" alt="" class="product__img">
+              <a href="product.php?id=<?php echo $pop_prod['id']; ?>" class="product__img-box">
+                <img src="images/products/<?php echo $pop_prod['image']; ?>_200x200.jpg" alt="" class="product__img">
               </a>
-              <a href="#" class="product__name"><?php echo $pop_prod['title'] ?></a>
-              <span class="product__price-weight"><?php echo $pop_prod['weight'] ?>g</span>
+              <a href="product.php?id=<?php echo $pop_prod['id']; ?>" class="product__name"> <?php echo $pop_prod['title']; ?> </a>
+              <span class="product__price-weight"> <?php echo $pop_prod['weight']; ?>g</span>
               <div class="product__bottom-box">
-                <p class="product__price"><?php echo $pop_prod['price'] ?>&#x58f</p>
+                <p class="product__price"><?php echo $pop_prod['price']; ?> &#x58f</p>
                 <button class="product__buy-btn">Buy</button>
               </div>
             </div>
@@ -106,7 +106,7 @@ include 'includes/db.php';
 
 
   <?php
-  $categories = mysqli_query($connection, 'SELECT * FROM `product_categories` GROUP BY `title`');
+  $categories = mysqli_query($connection, 'SELECT `image`,`title` FROM `product_categories` GROUP BY `title`');
   ?>
   <div class="category">
     <div class="container">
@@ -145,13 +145,13 @@ include 'includes/db.php';
             while($prod = mysqli_fetch_assoc($new_prod)){
               ?>
           <div class="product__item">
-            <a href="" class="product__img-box">
-              <img src="images/products/<?php echo $prod['image'] ?>.jpg" alt="" class="product__img">
+            <a href="product.php?id=<?php echo $prod['id']; ?>" class="product__img-box">
+              <img src="images/products/<?php echo $prod['image'] ?>_200x200.jpg" alt="" class="product__img">
             </a>
-            <a href="#" class="product__name"><?php echo $prod['title'] ?></a>
+            <a href="product.php?id=<?php echo $prod['id']; ?>" class="product__name"><?php echo $prod['title'] ?></a>
             <span class="product__price-weight"><?php echo $prod['weight'] ?>g</span>
             <div class="product__bottom-box">
-              <p class="product__price"><?php echo $prod['price'] ?>&#x58f</p>
+              <p class="product__price"><?php echo $prod['price'] ?> &#x58f</p>
               <button class="product__buy-btn">Buy</button>
             </div>
           </div>

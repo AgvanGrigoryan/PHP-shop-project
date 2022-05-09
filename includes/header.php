@@ -33,6 +33,18 @@
     <li><a href="#">Sale</a></li>
     <li><a href="#">Cabinet</a></li>
     <li><a href="./pages/about_me.php">About Me</a></li>
-    <li><a href="#">Contact Us</a></li>
   </ul>
+  <div class="search__box">
+    
+  <form class="search__form" method="GET" action="search_res.php">
+      <input class="search_field" type="text" name="search_field" placeholder="Search">
+        <button class="search__btn" type="submit">
+          <svg class="search__img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.2 14.4C6.32 14.4 4 12.08 4 9.2C4 6.32 6.32 4 9.2 4C12.08 4 14.4 6.32 14.4 9.2C14.4 12.08 12.08 14.4 9.2 14.4ZM9.2 4.8C6.76 4.8 4.8 6.76 4.8 9.2C4.8 11.64 6.76 13.6 9.2 13.6C11.64 13.6 13.6 11.64 13.6 9.2C13.6 6.76 11.64 4.8 9.2 4.8Z" fill="#1F1E1E"/>
+            <path d="M13.0728 12.5068L16.6648 16.0988L16.0992 16.6644L12.5072 13.0724L13.0728 12.5068Z" fill="#1F1E1E"/>
+          </svg>
+        </button>
+    </form>
+    
+  </div>
 </nav>

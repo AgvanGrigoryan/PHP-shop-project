@@ -1,4 +1,5 @@
 let nav = document.querySelector('nav');
+let inp = document.querySelector('.search_field');
 // let cat_slider = document.querySelector('.category__items');
 let oldScrollTopPosition = 0;
 window.addEventListener('scroll', () => {
@@ -8,6 +9,11 @@ window.addEventListener('scroll', () => {
     }else{
         nav.classList.remove('black');
     };
+});
+
+inp.addEventListener('focus',()=>{
+	// document.querySelector('.search__box').style.background = 'white';
+    document.querySelector('.search__box').classList.add('focused');
 });
 
 $(function(){
