@@ -11,9 +11,13 @@ window.addEventListener('scroll', () => {
     };
 });
 
-inp.addEventListener('focus',()=>{
+inp.addEventListener('focusin',()=>{
 	// document.querySelector('.search__box').style.background = 'white';
     document.querySelector('.search__box').classList.add('focused');
+});
+inp.addEventListener('focusout',()=>{
+	// document.querySelector('.search__box').style.background = 'white';
+    document.querySelector('.search__box').classList.remove('focused');
 });
 
 $(function(){
