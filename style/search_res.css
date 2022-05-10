@@ -97,14 +97,19 @@ h1 {
     color: #f5f5f5;
     margin-right: auto;
 }
+.prod__info a{
+    text-decoration: none;
+}
 .prod__title {
     margin-top:0;
     font-weight: 300;
     font-size: 28px;
     text-align: center;
+    color: #f5f5f5;
 }
 .prod__category {
     text-decoration: none;
+    color: #797979;
 }
 .prod__price {
     color: #60cf4a;

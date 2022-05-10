@@ -3,6 +3,9 @@ include 'includes/db.php';
 ?>
 <?php
     $request = $_GET['search_field'];
+    if($request == '' or $request ==' '){
+        echo 'barev';
+    }
     $res = mysqli_query($connection,"SELECT * FROM `product` WHERE `title` LIKE('%{$request}%')");
 ?>
 <!DOCTYPE html>

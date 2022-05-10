@@ -36,7 +36,7 @@
   </ul>
   <div class="search__box">
     
-  <form class="search__form" method="GET" action="search_res.php">
+  <form class="search__form" method="GET" >
       <input class="search_field" type="text" name="search_field" placeholder="Search">
         <button class="search__btn" type="submit">
           <svg class="search__img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,3 +48,4 @@
     
   </div>
 </nav>
+
