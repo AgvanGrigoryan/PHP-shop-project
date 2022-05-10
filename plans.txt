@@ -3,6 +3,11 @@ dorabotat design search_res.php
 
 sdelat effect obratnogo focusa dlya pole poiska
 
+========
+ispravit product_categories
+dobavit tovari
+========
+
 product page
 category page
 
