@@ -85,7 +85,7 @@ include 'includes/db.php';
                 <img src="images/products/<?php echo $pop_prod['image']; ?>_200x200.jpg" alt="" class="product__img">
               </a>
               <a href="product.php?id=<?php echo $pop_prod['id']; ?>" class="product__name"> <?php echo $pop_prod['title']; ?> </a>
-              <span class="product__price-weight"> <?php echo $pop_prod['weight']; ?>g</span>
+              <span class="product__price-weight"> <?php echo $pop_prod['weight']; ?> pcs/kg</span>
               <div class="product__bottom-box">
                 <p class="product__price"><?php echo $pop_prod['price']; ?> &#x58f</p>
                 <button class="product__buy-btn">Buy</button>
@@ -146,7 +146,7 @@ include 'includes/db.php';
               <img src="images/products/<?php echo $prod['image'] ?>_200x200.jpg" alt="" class="product__img">
             </a>
             <a href="product.php?id=<?php echo $prod['id']; ?>" class="product__name"><?php echo $prod['title'] ?></a>
-            <span class="product__price-weight"><?php echo $prod['weight'] ?>g</span>
+            <span class="product__price-weight"><?php echo $prod['weight'] ?> pcs/kg</span>
             <div class="product__bottom-box">
               <p class="product__price"><?php echo $prod['price'] ?> &#x58f</p>
               <button class="product__buy-btn">Buy</button>
