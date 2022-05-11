@@ -1,8 +1,5 @@
+admin-panel
 
-========
-ispravit product_categories
-dobavit tovari
-========
 
 product page
 category page
