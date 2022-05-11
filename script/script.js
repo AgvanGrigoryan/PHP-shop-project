@@ -14,10 +14,11 @@ window.addEventListener('scroll', () => {
     };
 });
 search__btn.addEventListener('click',()=>{
-    var trimInp = inp.value.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,'');
+    var trimInp = inp.value.replace(/^\s+|\s+$|[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,'');
     if(trimInp == ''){
         alert('search field is empty or invalid input');
     }else{
+        inp.value=trimInp;
         search__form.setAttribute('action','search_res.php');
     }
 
