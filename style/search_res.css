@@ -17,7 +17,7 @@ body {
 }
 
 hr {
-    border-color: lime;
+    border-color: #a5fc34;
 }
 
 .h1 {
@@ -70,7 +70,7 @@ h1 {
     /* border: 1px solid orange; */
     border-radius: 10px;
     width: 450px;
-    box-shadow: #fccd34 0 1px 5px;
+    box-shadow: #a5fc34 0 1px 5px;
 }
 
 .prod__img-box {
