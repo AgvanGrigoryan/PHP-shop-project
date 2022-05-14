@@ -1,5 +1,11 @@
 <?php
 include '../includes/db.php';
+if (isset($_SESSION['id'])) {
+    if($_SESSION['id'] == 'logined'){
+        header( 'Location: admin_panel.php', true, 307 ); 
+    };
+}
+
 ?>
 <head>
     <meta charset="UTF-8">
@@ -32,6 +38,7 @@ if (isset($_GET['submit'])) {
     if(mysqli_num_rows($count) == 0){
         echo '<div>blabla</div>';
     }else {
+        $_SESSION['id'] = 'logined';
         header( 'Location: admin_panel.php', true, 307 ); 
     }
     
